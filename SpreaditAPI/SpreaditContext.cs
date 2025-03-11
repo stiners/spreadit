@@ -9,7 +9,7 @@ public class SpreaditContext : DbContext
     public DbSet<Comment> Comments { get; set; }
     public DbSet<User> Users { get; set; }
 
-    private string DbPath { get; } = "bin/spreadit.db";
+    private string DbPath { get; } = "spreadit.db";
 
     protected override void OnConfiguring(DbContextOptionsBuilder options)
         => options.UseSqlite($"Data Source={DbPath}");
