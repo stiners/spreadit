@@ -16,7 +16,7 @@ else
             <th>Content</th>
             <th colspan="3">Votes</th>
         </tr>
-        @foreach (var post in _posts.OrderByDescending(p => p.Date))
+        @foreach (var post in _posts.OrderByDescending(p => p.Date).Take(50))
         {
             <tr>
                 <!-- 
